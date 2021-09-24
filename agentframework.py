@@ -56,7 +56,7 @@ class Agent():
     
     
     def share_with_neighbours(self, neighbourhood):
-        #Make agents scan each other & adjust themselves
+        #Make agents scan each other & adjust themselves when their distance falls within the neighbourhood
         
         for agent in self.agents:
             dist = self.distance_between(agent)
@@ -65,9 +65,7 @@ class Agent():
                 ave = sum /2
                 self.store = ave
                 agent.store = ave
-                """when the distance between two agents falls within the neighbourhood
-                """
-                print("sharing " + str(dist) + " " + str(ave)) 
+                # print("sharing " + str(dist) + " " + str(ave)) to check whether the function works
     
   
     def distance_between(self, agent):
